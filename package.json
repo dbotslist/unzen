@@ -21,7 +21,7 @@
     "framer-motion": "^11.0.25",
     "graphql": "^16.8.1",
     "markdown-to-jsx": "^7.4.6",
-    "next": "14.2.0",
+    "next": "14.2.2",
     "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18",
