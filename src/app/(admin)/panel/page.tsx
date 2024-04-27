@@ -1,6 +1,6 @@
 "use client";
 
-import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
+import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/react";
 
 export default function Page() {
 	return (

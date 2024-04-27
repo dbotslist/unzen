@@ -1,5 +1,6 @@
 "use client";
 
+import { UserPermissions } from "@/lib/constants/api";
 import useSessionStore from "@/lib/stores/session";
 import { type AuthUserObject, useLogoutMutation } from "@/lib/types/apollo";
 import { handleError, hasPermissionFor, parseAvatar } from "@/lib/utils/common";
@@ -21,7 +22,6 @@ import { useRouter } from "next/navigation";
 import Loader from "../../loader";
 import SubmitModal from "../../modals/submit";
 import Policy from "../../policy";
-import { UserPermissions } from "@/lib/constants/api";
 
 export default function HeaderAuthUser({
 	avatar,

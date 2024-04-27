@@ -2,15 +2,15 @@ import LoadingScreen from "@/components/common/layout/loading-screen";
 import { BotStatus, type PanelBotsQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import {
-	Table,
-	TableHeader,
-	TableColumn,
-	TableBody,
-	TableRow,
-	TableCell,
-	User,
-	Chip,
 	Button,
+	Chip,
+	Table,
+	TableBody,
+	TableCell,
+	TableColumn,
+	TableHeader,
+	TableRow,
+	User,
 } from "@nextui-org/react";
 import { IconCheck, IconX } from "@tabler/icons-react";
 
