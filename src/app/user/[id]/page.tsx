@@ -1,34 +1,33 @@
 "use client";
 
 import ErrorMessage from "@/components/common/error-message";
-import { useGetUserQuery } from "@/lib/types/apollo";
-import { handleError, parseAvatar } from "@/lib/utils/common";
+import { useGetUserSuspenseQuery } from "@/lib/types/apollo";
+import { parseAvatar } from "@/lib/utils/common";
 import { Avatar, Image, Tab, Tabs, Tooltip } from "@nextui-org/react";
 import { IconAppsFilled, IconArchiveFilled } from "@tabler/icons-react";
 import { notFound } from "next/navigation";
-import UserLoading from "../loading";
+
+// Mock
+const mockedUserBadges = [
+	{
+		id: "assembly",
+		label: "Website Developer",
+	},
+];
 
 export default function Page({ params: { id } }: { params: { id: string } }) {
-	const { data, loading } = useGetUserQuery({
+	const {
+		data: { getUser: user },
+		error,
+	} = useGetUserSuspenseQuery({
 		variables: {
 			input: {
 				id,
 			},
 		},
-		onError: handleError,
 	});
 
-	const mockedUserBadges = [
-		{
-			id: "assembly",
-			label: "Website Developer",
-		},
-	];
-
-	if (loading) return <UserLoading />;
-	if (!data && !loading) return notFound();
-
-	const user = data?.getUser!;
+	if (error) return notFound();
 	return (
 		<div className="flex flex-col gap-5">
 			<div className="h-full rounded-large p-3 flex flex-col gap-3">

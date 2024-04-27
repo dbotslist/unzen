@@ -12,7 +12,7 @@ import {
 } from "@tabler/icons-react";
 
 export default function Page() {
-	const { data: bots } = useHomeBotsQuery(); // todo: make a single query that fetchs "tags" and "bots"
+	const { data: bots } = useHomeBotsQuery();
 
 	const latestBotsRow = bots?.latest.nodes?.length
 		? bots.latest.nodes.map((bot, key) => (
