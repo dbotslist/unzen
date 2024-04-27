@@ -3,16 +3,12 @@
 import BotCard from "@/components/common/cards/bot.normal";
 import { useHomeBotsSuspenseQuery, type BotObject } from "@/lib/types/apollo";
 import { IconDiamondFilled, IconThumbUpFilled } from "@tabler/icons-react";
-import { notFound } from "next/navigation";
 import BotRow from "../bot/row";
 
 export default function HomeBotsRows() {
 	const {
 		data: { latest, popular },
-		error,
-	} = useHomeBotsSuspenseQuery({
-		queryKey: "home-bots",
-	});
+	} = useHomeBotsSuspenseQuery();
 
 	const latestBotsRow = latest.nodes?.length
 		? latest.nodes.map((bot, key) => (
@@ -26,7 +22,6 @@ export default function HomeBotsRows() {
 			))
 		: undefined;
 
-	if (error) return notFound();
 	return (
 		<div className="flex flex-col gap-5">
 			<BotRow

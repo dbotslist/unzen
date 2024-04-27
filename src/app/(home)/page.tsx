@@ -1,5 +1,7 @@
 import TagButton from "@/components/common/buttons/tag-button";
 import HomeBotsRows from "@/components/modules/home/rows";
+import HomeSuspenseFallback from "@/components/modules/home/suspense";
+import { Suspense } from "react";
 
 export default function Page() {
 	return (
@@ -30,7 +32,9 @@ export default function Page() {
 					</div>
 				</div>
 			</div>
-			<HomeBotsRows />
+			<Suspense fallback={<HomeSuspenseFallback />}>
+				<HomeBotsRows />
+			</Suspense>
 		</div>
 	);
 }

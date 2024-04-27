@@ -25,13 +25,13 @@ export default function BotSkeletonCard() {
 				<div className="flex justify-between items-center w-full">
 					<div className="flex flex-row gap-3 items-center">
 						<Skeleton className="w-20 h-20 rounded-medium" />
-						<div className="flex flex-col">
+						<div className="flex flex-col gap-1">
 							<div className="flex items-center gap-1">
-								<Skeleton>
+								<Skeleton className="rounded-medium">
 									<h3 className="text-xl font-bold">Discord bot</h3>
 								</Skeleton>
 							</div>
-							<Skeleton>
+							<Skeleton className="rounded-medium">
 								<p className="text-default-600 text-sm">
 									Fun, Moderation, Etc.
 								</p>
@@ -41,7 +41,7 @@ export default function BotSkeletonCard() {
 				</div>
 			</CardHeader>
 			<CardBody className="overflow-clip h-64 gradient-mask-b-0">
-				<Skeleton>
+				<Skeleton className="rounded-medium">
 					<p className="text-small">
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
 						itaque consequuntur vero minus esse tenetur nobis odio.{" "}
@@ -50,10 +50,10 @@ export default function BotSkeletonCard() {
 			</CardBody>
 			<CardFooter className="flex justify-between w-full text-default-600 text-lg">
 				<div className="flex items-center gap-1">
-					<Skeleton>100</Skeleton>
+					<Skeleton className="rounded-medium">100</Skeleton>
 				</div>
 				<div className="flex items-center gap-1">
-					<Skeleton>100</Skeleton>
+					<Skeleton className="rounded-medium">100</Skeleton>
 				</div>
 			</CardFooter>
 		</Card>
