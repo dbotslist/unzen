@@ -1,7 +1,7 @@
 "use client";
 
 import LoadingScreen from "@/components/common/layout/loading-screen";
-import { UserPermissionsFlags } from "@/lib/constants/api";
+import { UserPermissions } from "@/lib/constants/api";
 import useSessionStore from "@/lib/stores/session";
 import { hasPermissionFor } from "@/lib/utils/common";
 import { notFound } from "next/navigation";
@@ -13,7 +13,7 @@ export default function PanelLayout({ children }: { children: ReactNode }) {
 	if (loading) return <LoadingScreen />;
 	if (
 		!auth ||
-		!hasPermissionFor(auth.me.permissions!, UserPermissionsFlags.ManageBots)
+		!hasPermissionFor(auth.me.permissions!, UserPermissions.ManageBots)
 	)
 		return notFound();
 

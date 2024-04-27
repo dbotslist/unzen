@@ -1,4 +1,4 @@
-export const UserPermissionsFlags = {
+export const UserPermissions = {
 	ManageUsers: 1 << 0, // 1
 	ManageBadges: 1 << 1, // 2
 	ManageReviews: 1 << 2, // 4

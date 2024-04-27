@@ -2,7 +2,7 @@
 
 import useSessionStore from "@/lib/stores/session";
 import { type AuthUserObject, useLogoutMutation } from "@/lib/types/apollo";
-import { handleError, parseAvatar } from "@/lib/utils/common";
+import { handleError, hasPermissionFor, parseAvatar } from "@/lib/utils/common";
 import {
 	Avatar,
 	Dropdown,
@@ -20,10 +20,13 @@ import {
 import { useRouter } from "next/navigation";
 import Loader from "../../loader";
 import SubmitModal from "../../modals/submit";
+import Policy from "../../policy";
+import { UserPermissions } from "@/lib/constants/api";
 
 export default function HeaderAuthUser({
 	avatar,
 	id,
+	permissions,
 }: Partial<AuthUserObject>) {
 	const disclosureProps = useDisclosure();
 	const router = useRouter();
@@ -34,6 +37,11 @@ export default function HeaderAuthUser({
 		},
 		onError: handleError,
 	});
+
+	const canSeePanel = hasPermissionFor(
+		permissions as number,
+		UserPermissions.ManageBots,
+	);
 
 	return (
 		<>
@@ -49,14 +57,11 @@ export default function HeaderAuthUser({
 					/>
 				</DropdownTrigger>
 				<DropdownMenu variant="faded" aria-label="User dropdown">
-					<DropdownItem startContent={<IconUserFilled className="w-5 h-5" />}>
-						Profile
-					</DropdownItem>
 					<DropdownItem
-						href="/settings"
-						startContent={<IconSettingsFilled className="w-5 h-5" />}
+						href={`/user/${id}`}
+						startContent={<IconUserFilled className="w-5 h-5" />}
 					>
-						Settings
+						Profile
 					</DropdownItem>
 					<DropdownItem
 						onClick={disclosureProps.onOpen}
@@ -64,6 +69,21 @@ export default function HeaderAuthUser({
 					>
 						Submit
 					</DropdownItem>
+					{canSeePanel ? (
+						<DropdownItem
+							href="/panel"
+							startContent={<IconSettingsFilled className="w-5 h-5" />}
+						>
+							Admin panel
+						</DropdownItem>
+					) : (
+						<DropdownItem
+							href="/"
+							startContent={<IconSettingsFilled className="w-5 h-5" />}
+						>
+							Settings
+						</DropdownItem>
+					)}
 					<DropdownItem
 						onClick={() => logout()}
 						startContent={

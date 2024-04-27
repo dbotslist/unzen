@@ -9,7 +9,7 @@ interface PolicyProps {
 export default function Policy({
 	condition,
 	children,
-	fallback = null,
+	fallback = <></>,
 }: PolicyProps) {
 	return condition ? children : fallback;
 }
