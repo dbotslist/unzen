@@ -3,7 +3,7 @@
 import TagButton from "@/components/common/buttons/tag-button";
 import BotCard from "@/components/common/cards/bot.normal";
 import BotRow from "@/components/modules/bot/row";
-import { type BotObject, useHomeBotsSuspenseQuery } from "@/lib/types/apollo";
+import { type BotObject, useHomeBotsQuery } from "@/lib/types/apollo";
 import { Input } from "@nextui-org/react";
 import {
 	IconDiamondFilled,
@@ -12,18 +12,16 @@ import {
 } from "@tabler/icons-react";
 
 export default function Page() {
-	const {
-		data: { latest, popular },
-	} = useHomeBotsSuspenseQuery(); // todo: make a single query that fetchs "tags" and "bots"
+	const { data: bots } = useHomeBotsQuery(); // todo: make a single query that fetchs "tags" and "bots"
 
-	const latestBotsRow = latest.nodes?.length
-		? latest.nodes.map((bot, key) => (
+	const latestBotsRow = bots?.latest.nodes?.length
+		? bots.latest.nodes.map((bot, key) => (
 				<BotCard key={key} {...(bot as BotObject)} />
 			))
 		: undefined;
 
-	const popularBotsRow = popular.nodes?.length
-		? popular.nodes.map((bot, key) => (
+	const popularBotsRow = bots?.popular.nodes?.length
+		? bots.popular.nodes.map((bot, key) => (
 				<BotCard key={key} {...(bot as BotObject)} />
 			))
 		: undefined;

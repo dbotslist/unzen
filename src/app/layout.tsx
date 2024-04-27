@@ -3,10 +3,8 @@ import { Providers } from "@/components/common/providers";
 import { openGraph } from "@/lib/constants/open-graph";
 import type { Metadata } from "next";
 import { Sora as FontSans } from "next/font/google";
-
 import Footer from "@/components/common/layout/footer";
 
-import VanitiesFeatureModal from "@/components/common/modals/features/vanities";
 import "@/styles/globals.css";
 
 const font = FontSans({ subsets: ["latin"] });
@@ -27,8 +25,6 @@ export default function RootLayout({
 			<body className={font.className}>
 				<Providers>
 					<Header />
-					{/** Features */}
-					<VanitiesFeatureModal />
 					<main className="px-4 sm:px-12 lg:px-32">{children}</main>
 					<Footer />
 				</Providers>

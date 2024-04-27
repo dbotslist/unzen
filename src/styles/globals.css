@@ -18,3 +18,7 @@
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-secondary-700;
 }
+
+[data-icon] {
+    @apply w-11;
+}

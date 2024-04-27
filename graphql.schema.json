@@ -31,6 +31,18 @@
             "deprecationReason": null
           },
           {
+            "name": "reason",
+            "description": "The reason for the status change.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "status",
             "description": "The new status.",
             "type": {
@@ -1926,6 +1938,33 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "GetUserInput",
+        "description": "The input used to get a user.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "The ID of the user to retrieve.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "GetVanityInput",
         "description": "The input type for getting a vanity URL.",
         "fields": null,
@@ -2203,7 +2242,7 @@
           },
           {
             "name": "deleteBot",
-            "description": "Deletes an existing bot.",
+            "description": null,
             "args": [
               {
                 "name": "input",
@@ -2367,7 +2406,7 @@
           },
           {
             "name": "updateBotStatus",
-            "description": null,
+            "description": "Updates the status of a bot.",
             "args": [
               {
                 "name": "input",
@@ -2777,6 +2816,39 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "BotTagObject",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "getUser",
+            "description": "Fetches a user by their ID",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "GetUserInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AuthUserObject",
                 "ofType": null
               }
             },

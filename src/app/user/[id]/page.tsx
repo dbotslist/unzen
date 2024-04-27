@@ -1,20 +1,21 @@
 "use client";
 
 import ErrorMessage from "@/components/common/error-message";
-import LoadingScreen from "@/components/common/layout/loading-screen";
-import { useGetBotOwnerQuery } from "@/lib/types/apollo";
-import { parseAvatar } from "@/lib/utils/common";
+import { useGetUserQuery } from "@/lib/types/apollo";
+import { handleError, parseAvatar } from "@/lib/utils/common";
 import { Avatar, Image, Tab, Tabs, Tooltip } from "@nextui-org/react";
 import { IconAppsFilled, IconArchiveFilled } from "@tabler/icons-react";
 import { notFound } from "next/navigation";
+import UserLoading from "../loading";
 
 export default function Page({ params: { id } }: { params: { id: string } }) {
-	const { data, loading: gettingUser } = useGetBotOwnerQuery({
+	const { data, loading } = useGetUserQuery({
 		variables: {
 			input: {
 				id,
 			},
 		},
+		onError: handleError,
 	});
 
 	const mockedUserBadges = [
@@ -24,10 +25,10 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
 		},
 	];
 
-	if (gettingUser) return <LoadingScreen />;
-	if (!data && !gettingUser) return notFound();
+	if (loading) return <UserLoading />;
+	if (!data && !loading) return notFound();
 
-	const user = data?.getOwner!;
+	const user = data?.getUser!;
 	return (
 		<div className="flex flex-col gap-5">
 			<div className="h-full rounded-large p-3 flex flex-col gap-3">
