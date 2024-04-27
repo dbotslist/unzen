@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, type ButtonProps } from "@nextui-org/react";
 import { IconHash } from "@tabler/icons-react";
 

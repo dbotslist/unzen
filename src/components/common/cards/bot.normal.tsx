@@ -14,19 +14,7 @@ import { IconArrowUp, IconServer } from "@tabler/icons-react";
 import Link from "next/link";
 import FallbackAvatar from "../fallback-avatar";
 
-interface BotCardProps
-	extends Partial<
-		Pick<
-			BotObject,
-			| "id"
-			| "avatar"
-			| "name"
-			| "shortDescription"
-			| "certified"
-			| "guildCount"
-			| "votes"
-		>
-	> {}
+interface BotCardProps extends Partial<BotObject> {}
 
 export default function BotCard({
 	id,

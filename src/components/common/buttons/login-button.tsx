@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, type ButtonProps } from "@nextui-org/react";
 import Link from "next/link";
 import DiscordIcon from "../icons/discord";

@@ -1,31 +1,7 @@
-"use client";
-
 import TagButton from "@/components/common/buttons/tag-button";
-import BotCard from "@/components/common/cards/bot.normal";
-import BotRow from "@/components/modules/bot/row";
-import { type BotObject, useHomeBotsQuery } from "@/lib/types/apollo";
-import { Input } from "@nextui-org/react";
-import {
-	IconDiamondFilled,
-	IconSearch,
-	IconThumbUpFilled,
-} from "@tabler/icons-react";
+import HomeBotsRows from "@/components/modules/home/rows";
 
 export default function Page() {
-	const { data: bots } = useHomeBotsQuery();
-
-	const latestBotsRow = bots?.latest.nodes?.length
-		? bots.latest.nodes.map((bot, key) => (
-				<BotCard key={key} {...(bot as BotObject)} />
-			))
-		: undefined;
-
-	const popularBotsRow = bots?.popular.nodes?.length
-		? bots.popular.nodes.map((bot, key) => (
-				<BotCard key={key} {...(bot as BotObject)} />
-			))
-		: undefined;
-
 	return (
 		<div className="flex flex-col gap-10">
 			<div className="flex justify-between w-full max-h-72 ">
@@ -39,14 +15,6 @@ export default function Page() {
 							magni nam omnis! Voluptas cumque neque sunt? Itaque tempore cum
 							incidunt alias, ipsa unde autem qui magni et hic cumque quae.
 						</p>
-						<Input
-							isClearable
-							startContent={<IconSearch className="w-5 h-5" />}
-							variant="bordered"
-							color="secondary"
-							className="w-full"
-							placeholder={"Search through 100 bots"}
-						/>
 						<div className="flex flex-wrap gap-1">
 							<TagButton>Gaming</TagButton>
 							<TagButton>Music</TagButton>
@@ -62,20 +30,7 @@ export default function Page() {
 					</div>
 				</div>
 			</div>
-			<BotRow
-				title="Popular"
-				subtitle="This month most voted bots"
-				icon={<IconDiamondFilled className="w-6 h-6" />}
-			>
-				{popularBotsRow}
-			</BotRow>
-			<BotRow
-				title="Latest"
-				subtitle="Most recent bots"
-				icon={<IconThumbUpFilled className="w-6 h-6" />}
-			>
-				{latestBotsRow}
-			</BotRow>
+			<HomeBotsRows />
 		</div>
 	);
 }
