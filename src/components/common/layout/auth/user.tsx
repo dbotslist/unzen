@@ -21,7 +21,6 @@ import {
 import { useRouter } from "next/navigation";
 import Loader from "../../loader";
 import SubmitModal from "../../modals/submit";
-import Policy from "../../policy";
 
 export default function HeaderAuthUser({
 	avatar,

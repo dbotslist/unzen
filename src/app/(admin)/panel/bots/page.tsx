@@ -28,8 +28,9 @@ export default function Page() {
 				status,
 			},
 		},
-		fetchPolicy: "network-only",
+		fetchPolicy: "cache-and-network",
 	});
+
 	const [updateBotStatusMutation, { loading: updating }] =
 		useUpdateBotStatusMutation({
 			onCompleted: () => {
