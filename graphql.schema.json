@@ -9,6 +9,100 @@
     "subscriptionType": null,
     "types": [
       {
+        "kind": "INPUT_OBJECT",
+        "name": "AdminBotChangeStatusInput",
+        "description": "Input to change a bot status.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "The ID of the bot.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "status",
+            "description": "The new status.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "BotStatus",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "AdminUserPermissionsInput",
+        "description": "Input to set the permissions for a user.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "The ID of the user.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "permissions",
+            "description": "The new permissions to be set for the user.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "UserPermissionsFlags",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "AuthSessionObject",
         "description": "Information related to a user session.",
@@ -145,9 +239,13 @@
             "description": "The permissions of the user",
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -259,13 +357,13 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "AuthUserUpdate",
+        "name": "AuthUserUpdateInput",
         "description": "The input of the user update mutation",
         "fields": null,
         "inputFields": [
           {
             "name": "banner",
-            "description": "The user avatar",
+            "description": "The banner of the user.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -2203,7 +2301,7 @@
           },
           {
             "name": "resetApiKey",
-            "description": "Reset and return a new Api Key",
+            "description": "Reset and return a new API key",
             "args": [
               {
                 "name": "input",
@@ -2268,6 +2366,39 @@
             "deprecationReason": null
           },
           {
+            "name": "updateBotStatus",
+            "description": null,
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AdminBotChangeStatusInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BotObject",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "updateUser",
             "description": "Updates the authenticated user",
             "args": [
@@ -2279,7 +2410,40 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "AuthUserUpdate",
+                    "name": "AuthUserUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AuthUserObject",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updateUserPermissions",
+            "description": "Sets the permissions for a user.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AdminUserPermissionsInput",
                     "ofType": null
                   }
                 },
@@ -2942,6 +3106,59 @@
         ],
         "interfaces": null,
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "UserPermissionsFlags",
+        "description": "The permissions that a user has.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "Admin",
+            "description": "The user is an admin.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ManageBadges",
+            "description": "The user can manage badges.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ManageBots",
+            "description": "The user can manage bots.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ManagePermissions",
+            "description": "The user can manage permissions.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ManageReviews",
+            "description": "The user can manage reviews.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ManageTags",
+            "description": "The user can manage tags.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ManageUsers",
+            "description": "The user can manage users.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {

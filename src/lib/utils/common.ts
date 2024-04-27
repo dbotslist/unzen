@@ -30,3 +30,10 @@ export function formatDate(ms: number) {
 
 	return `${hours} hours and ${minutes} minutes`;
 }
+
+export function hasPermissionFor(
+	userPermissions: number,
+	requiredPermissions: number,
+) {
+	return userPermissions >= requiredPermissions;
+}

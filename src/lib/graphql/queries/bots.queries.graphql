@@ -102,3 +102,21 @@ query Webhook($input: GetWebhookInput!) {
     url
   }
 }
+
+# Query to get bots for the admin panel
+query PanelBots($input: FiltersBotInput) {
+  panelBots(input: $input) {
+    totalCount
+    nodes {
+      avatar
+      owners {
+        avatar
+        id
+        username
+      }
+      id
+      name
+      status
+    }
+  }
+}

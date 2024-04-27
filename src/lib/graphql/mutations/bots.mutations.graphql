@@ -13,3 +13,10 @@ mutation DeleteBot($input: DeleteBotInput!) {
     name
   }
 }
+
+mutation UpdateBotStatus($input: AdminBotChangeStatusInput!) {
+  updateBotStatus(input: $input) {
+    id
+    status
+  }
+}
