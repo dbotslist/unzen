@@ -1,11 +1,12 @@
 "use client";
 
+import { useGetPanelStatsQuery } from "@/lib/types/apollo";
 import { BreadcrumbItem, Breadcrumbs, Card, CardBody } from "@nextui-org/react";
 import { IconRobot, IconTags } from "@tabler/icons-react";
 import Link from "next/link";
 
 export default function Page() {
-	// todo: add some stats
+	const { data: stats } = useGetPanelStatsQuery();
 	return (
 		<div className="flex flex-col gap-3">
 			<Breadcrumbs>
@@ -20,18 +21,18 @@ export default function Page() {
 								<IconRobot className="w-6 h-6" />
 								<h1 className="text-xl font-bold">Bots</h1>
 							</div>
-							<p className="text-default-600">0</p>
+							<p className="text-default-600">{stats?.bots.totalCount ?? 0}</p>
 						</div>
 					</CardBody>
 				</Card>
-				<Card isPressable>
+				<Card as={Link} href={"/panel/tags"} isPressable>
 					<CardBody>
 						<div className="flex justify-between items-center">
 							<div className="flex items-center gap-3">
 								<IconTags className="w-6 h-6" />
 								<h1 className="text-xl font-bold">Tags</h1>
 							</div>
-							<p className="text-default-600">0</p>
+							<p className="text-default-600">{stats?.tags.totalCount ?? 0}</p>
 						</div>
 					</CardBody>
 				</Card>

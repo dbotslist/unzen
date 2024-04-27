@@ -1,9 +1,9 @@
+import Footer from "@/components/common/layout/footer";
 import Header from "@/components/common/layout/header";
 import { Providers } from "@/components/common/providers";
 import { openGraph } from "@/lib/constants/open-graph";
 import type { Metadata } from "next";
 import { Sora as FontSans } from "next/font/google";
-import Footer from "@/components/common/layout/footer";
 
 import "@/styles/globals.css";
 

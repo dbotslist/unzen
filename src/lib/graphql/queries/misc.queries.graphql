@@ -17,3 +17,24 @@ query Vanity($input: GetVanityInput!) {
     userId
   }
 }
+
+query GetPanelStats {
+  bots {
+    totalCount
+  }
+  tags {
+    totalCount
+  }
+}
+
+query GetTags {
+  tags {
+    nodes {
+      bots {
+        totalCount
+      }
+      displayName
+      name
+    }
+  }
+}
