@@ -8,17 +8,17 @@ import {
 } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import {
-	Table,
-	TableHeader,
-	TableColumn,
-	TableBody,
-	TableRow,
-	TableCell,
-	User,
-	Chip,
 	Button,
+	Chip,
 	Select,
 	SelectItem,
+	Table,
+	TableBody,
+	TableCell,
+	TableColumn,
+	TableHeader,
+	TableRow,
+	User,
 } from "@nextui-org/react";
 import { IconCheck, IconFilterFilled, IconX } from "@tabler/icons-react";
 import { useState } from "react";
