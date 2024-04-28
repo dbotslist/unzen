@@ -19,7 +19,7 @@ import {
 	IconUserFilled,
 } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
-import Loader from "../../loader";
+import Loader from "../../feedback/loader";
 import SubmitModal from "../../modals/submit";
 
 export default function HeaderAuthUser({

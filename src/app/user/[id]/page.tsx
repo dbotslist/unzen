@@ -1,6 +1,6 @@
 "use client";
 
-import ErrorMessage from "@/components/common/error-message";
+import ErrorMessage from "@/components/common/feedback/error-message";
 import { useGetUserSuspenseQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import { Avatar, Image, Tab, Tabs, Tooltip } from "@nextui-org/react";

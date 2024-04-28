@@ -1,4 +1,4 @@
-import Loader from "@/components/common/loader";
+import Loader from "@/components/common/feedback/loader";
 import BotDeleteModal from "@/components/common/modals/delete";
 import { type BotObject, useDeleteBotMutation } from "@/lib/types/apollo";
 import { removeFromCache } from "@/lib/utils/cache";

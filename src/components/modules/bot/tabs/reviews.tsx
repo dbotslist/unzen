@@ -1,4 +1,4 @@
-import ErrorMessage from "@/components/common/error-message";
+import ErrorMessage from "@/components/common/feedback/error-message";
 import { Progress } from "@nextui-org/react";
 import {
 	IconAlertTriangleFilled,

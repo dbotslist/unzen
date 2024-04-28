@@ -12,7 +12,7 @@ import {
 import BrandLogo from "@public/dbots-white_256x256.png";
 import Link from "next/link";
 import LoginButton from "../buttons/login-button";
-import Loader from "../loader";
+import Loader from "../feedback/loader";
 import Policy from "../policy";
 import HeaderAuthUser from "./auth/user";
 import ColorThemeChanger from "./theme/theme-changer";

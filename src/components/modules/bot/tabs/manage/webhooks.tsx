@@ -1,5 +1,5 @@
 import LoadingScreen from "@/components/common/layout/loading-screen";
-import Loader from "@/components/common/loader";
+import Loader from "@/components/common/feedback/loader";
 import { type WebhookDTO, webhookResolver } from "@/lib/dtos/webhook";
 import {
 	type BotObject,

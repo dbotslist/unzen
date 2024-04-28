@@ -1,4 +1,4 @@
-import Loader from "../loader";
+import Loader from "../feedback/loader";
 
 export default function LoadingScreen() {
 	return (

@@ -1,6 +1,6 @@
 "use client";
 
-import FallbackAvatar from "@/components/common/fallback-avatar";
+import FallbackAvatar from "@/components/common/feedback/fallback-avatar";
 import LoadingScreen from "@/components/common/layout/loading-screen";
 import SettingsBotTab from "@/components/modules/bot/tabs/manage";
 import OverviewBotTab from "@/components/modules/bot/tabs/overview";

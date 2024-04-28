@@ -1,6 +1,6 @@
 import TagButton from "@/components/common/buttons/tag-button";
 import DiscordIcon from "@/components/common/icons/discord";
-import MarkdownRender from "@/components/common/markdown";
+import MarkdownRender from "@/components/common/feedback/markdown";
 import type { BotObject } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import { Chip, Link, User } from "@nextui-org/react";

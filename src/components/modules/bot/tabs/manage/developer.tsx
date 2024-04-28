@@ -1,4 +1,4 @@
-import Loader from "@/components/common/loader";
+import Loader from "@/components/common/feedback/loader";
 import { type BotObject, useResetApiKeyMutation } from "@/lib/types/apollo";
 import { handleError } from "@/lib/utils/common";
 import {

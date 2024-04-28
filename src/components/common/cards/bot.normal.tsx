@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import { IconArrowUp, IconServer } from "@tabler/icons-react";
 import Link from "next/link";
-import FallbackAvatar from "../fallback-avatar";
+import FallbackAvatar from "../feedback/fallback-avatar";
 
 interface BotCardProps extends Partial<BotObject> {}
 

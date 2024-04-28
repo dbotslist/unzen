@@ -1,5 +1,6 @@
 import TagButton from "@/components/common/buttons/tag-button";
 import HomeBotsRows from "@/components/modules/home/rows";
+import HomeSearchInput from "@/components/modules/home/search";
 import HomeSuspenseFallback from "@/components/modules/home/suspense";
 import { Suspense } from "react";
 
@@ -17,6 +18,7 @@ export default function Page() {
 							magni nam omnis! Voluptas cumque neque sunt? Itaque tempore cum
 							incidunt alias, ipsa unde autem qui magni et hic cumque quae.
 						</p>
+						<HomeSearchInput />
 						<div className="flex flex-wrap gap-1">
 							<TagButton>Gaming</TagButton>
 							<TagButton>Music</TagButton>

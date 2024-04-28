@@ -1,4 +1,4 @@
-import ErrorMessage from "@/components/common/error-message";
+import ErrorMessage from "@/components/common/feedback/error-message";
 import LoadingScreen from "@/components/common/layout/loading-screen";
 import { cn } from "@nextui-org/react";
 import { type ReactNode, Suspense } from "react";
