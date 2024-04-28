@@ -1,7 +1,7 @@
 "use client";
 
 import BotCard from "@/components/common/cards/bot.normal";
-import { useHomeBotsSuspenseQuery, type BotObject } from "@/lib/types/apollo";
+import { type BotObject, useHomeBotsSuspenseQuery } from "@/lib/types/apollo";
 import { IconDiamondFilled, IconThumbUpFilled } from "@tabler/icons-react";
 import BotRow from "../bot/row";
 

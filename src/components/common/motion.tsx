@@ -1,4 +1,4 @@
-import { motion, type HTMLMotionProps } from "framer-motion";
+import { type HTMLMotionProps, motion } from "framer-motion";
 
 export default function Motion({ children, ...props }: HTMLMotionProps<"div">) {
 	return (
