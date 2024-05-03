@@ -1,6 +1,0 @@
-mutation CreateVote($input: BotVoteCreateInput!) {
-  createVote(input: $input) {
-    botId
-    expires
-  }
-}

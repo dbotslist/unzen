@@ -1,0 +1,75 @@
+######################################
+######                          ######
+######           BOTS           ######
+######                          ######
+######################################
+
+# Create a bot
+mutation CreateBot($input: CreateBotInput!) {
+  createBot(input: $input) {
+    id
+    name
+  }
+}
+
+# Delete a bot
+mutation DeleteBot($input: DeleteBotInput!) {
+  deleteBot(input: $input) {
+    id
+    name
+  }
+}
+
+# Update a bot status
+mutation UpdateBotStatus($input: AdminBotChangeStatusInput!) {
+  updateBotStatus(input: $input) {
+    id
+    status
+  }
+}
+
+# Reset bot api key
+mutation ResetApiKey($input: GetBotInput!) {
+  resetApiKey(input: $input)
+}
+
+# Create a vote, targeting bot
+mutation CreateVote($input: BotVoteCreateInput!) {
+  createVote(input: $input) {
+    botId
+    expires
+  }
+}
+
+# Create a bot webhook
+mutation CreateWebhook($input: CreateWebhookInput!) {
+  createWebhook(input: $input) {
+    events
+    payloadFields
+    id
+    secret
+    url
+  }
+}
+
+# Update a bot webhook
+mutation UpdateWebhook($input: UpdateWebhookInput!) {
+  updateWebhook(input: $input) {
+    events
+    payloadFields
+    id
+    secret
+    url
+  }
+}
+
+######################################
+######                          ######
+######           MISC           ######
+######                          ######
+######################################
+
+# Logout...?
+mutation Logout {
+  logOut
+}

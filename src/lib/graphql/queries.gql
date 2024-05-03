@@ -1,0 +1,202 @@
+######################################
+######                          ######
+######         FRAGMENTS        ######
+######                          ######
+######################################
+
+fragment BotCard on BotObject {
+  avatar
+  shortDescription
+  name
+  tags {
+    displayName
+  }
+  id
+  guildCount
+  votes {
+    totalCount
+  }
+  certified
+}
+
+######################################
+######                          ######
+######           BOTS           ######
+######                          ######
+######################################
+
+# Query for home page
+query HomeBots {
+  latest: bots(pagination: { sortOrder: DESC, sortBy: "createdAt" }) {
+    nodes {
+      ...BotCard
+    }
+  }
+  popular: bots(pagination: { sortOrder: DESC, sortBy: "votes" }) {
+    nodes {
+      ...BotCard
+    }
+  }
+}
+
+# Query for a single bot
+query SingleBot($input: GetBotInput!) {
+  getBot(input: $input) {
+    avatar
+    certified
+    description
+    website
+    supportServer
+    status
+    shortDescription
+    prefix
+    github
+    guildCount
+    id
+    importedFrom
+    inviteLink
+    name
+    votes {
+      totalCount
+    }
+    owners {
+      username
+      id
+      avatar
+    }
+    tags {
+      displayName
+      name
+    }
+  }
+}
+
+# Query for a single bot vote information
+query SingleBotVote($input: GetBotInput!, $canVoteInput: BotVoteCreateInput!) {
+  getBot(input: $input) {
+    avatar
+    id
+    name
+    votes {
+      totalCount
+    }
+    guildCount
+    certified
+  }
+  canVote(input: $canVoteInput) {
+    canVote
+    expires
+  }
+}
+
+# Query to check if user can vote a bot
+query CanVote($input: BotVoteCreateInput!) {
+  canVote(input: $input) {
+    canVote
+    expires
+  }
+}
+
+# Query to get bot webhook
+query Webhook($input: GetWebhookInput!) {
+  getWebhook(input: $input) {
+    id
+    events
+    payloadFields
+    secret
+    url
+  }
+}
+
+# Query to get bots for the admin panel
+query PanelBots($input: FiltersBotInput) {
+  panelBots(input: $input) {
+    totalCount
+    nodes {
+      avatar
+      owners {
+        avatar
+        id
+        username
+      }
+      id
+      name
+      status
+    }
+  }
+}
+
+######################################
+######                          ######
+######          USERS           ######
+######                          ######
+######################################
+
+# Query to get a user
+query GetUser($input: GetUserInput!) {
+  getUser(input: $input) {
+    avatar
+    bio
+    id
+    username
+    banner
+    bots {
+      ...BotCard
+    }
+  }
+}
+
+######################################
+######                          ######
+######           TAGS           ######
+######                          ######
+######################################
+
+# Query to get tags
+query GetTags {
+  tags {
+    nodes {
+      bots {
+        totalCount
+      }
+      displayName
+      id
+    }
+  }
+}
+
+######################################
+######                          ######
+######           MISC           ######
+######                          ######
+######################################
+
+# Query to get session
+query Session {
+  me {
+    id
+    username
+    permissions
+    avatar
+  }
+}
+
+# Query to get a vanity
+query Vanity($input: GetVanityInput!) {
+  getVanity(input: $input) {
+    id
+    targetId
+    type
+    userId
+  }
+}
+
+# Query to get panel stats
+query GetPanelStats {
+  bots {
+    totalCount
+  }
+  tags {
+    totalCount
+  }
+}
