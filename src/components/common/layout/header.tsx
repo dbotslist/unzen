@@ -1,6 +1,10 @@
 "use client";
 
 import { useSession } from "@/lib/hooks/session";
+import { Divider } from "@nextui-org/divider";
+import { Image } from "@nextui-org/image";
+import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/navbar";
+import { cn } from "@nextui-org/system";
 import BrandLogo from "@public/dbots-white_256x256.png";
 import Link from "next/link";
 import LoginButton from "../buttons/login-button";
@@ -8,10 +12,6 @@ import Loader from "../feedback/loader";
 import Policy from "../policy";
 import HeaderAuthUser from "./auth/user";
 import ColorThemeChanger from "./theme/theme-changer";
-import { Image } from "@nextui-org/image";
-import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/navbar";
-import { Divider } from "@nextui-org/divider";
-import { cn } from "@nextui-org/system";
 
 export default function Header() {
 	const { data: session, loading: gettingSession } = useSession();

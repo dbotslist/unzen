@@ -9,10 +9,10 @@ import type { FetchResult, MutationFunctionOptions } from "@apollo/client";
 import { Button } from "@nextui-org/button";
 import {
 	Modal,
-	ModalContent,
-	ModalHeader,
 	ModalBody,
+	ModalContent,
 	ModalFooter,
+	ModalHeader,
 } from "@nextui-org/modal";
 
 interface BotDeleteModalProps extends DefaultModalProps {

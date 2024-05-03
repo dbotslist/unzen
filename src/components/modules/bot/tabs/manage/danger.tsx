@@ -4,11 +4,11 @@ import { type BotObject, useDeleteBotMutation } from "@/lib/types/apollo";
 import { removeFromCache } from "@/lib/utils/cache";
 import { handleError } from "@/lib/utils/common";
 import { Button } from "@nextui-org/button";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 import { IconTransfer, IconTrashFilled } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { useDisclosure } from "@nextui-org/use-disclosure";
 
 export default function ManageDangerBotTab({
 	id,

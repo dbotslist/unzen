@@ -3,7 +3,6 @@ import { BotStatus, type PanelBotsQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
-import { User } from "@nextui-org/user";
 import {
 	Table,
 	TableBody,
@@ -12,6 +11,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@nextui-org/table";
+import { User } from "@nextui-org/user";
 import { IconCheck, IconX } from "@tabler/icons-react";
 
 interface AdminPanelBotsTableProps {

@@ -16,11 +16,11 @@ import { Avatar } from "@nextui-org/avatar";
 import { Button } from "@nextui-org/button";
 import {
 	Dropdown,
-	DropdownTrigger,
-	DropdownMenu,
 	DropdownItem,
+	DropdownMenu,
+	DropdownTrigger,
 } from "@nextui-org/dropdown";
-import { Tabs, Tab } from "@nextui-org/tabs";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import {
 	IconArrowUp,
 	IconCopyPlusFilled,

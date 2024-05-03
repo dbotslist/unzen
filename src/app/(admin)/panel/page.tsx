@@ -1,8 +1,8 @@
 "use client";
 
 import { useGetPanelStatsQuery } from "@/lib/types/apollo";
-import { Card, CardBody } from "@nextui-org/card";
 import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/breadcrumbs";
+import { Card, CardBody } from "@nextui-org/card";
 import { IconRobot, IconTags } from "@tabler/icons-react";
 import Link from "next/link";
 

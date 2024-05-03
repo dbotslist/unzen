@@ -1,7 +1,7 @@
 import type { BotObject } from "@/lib/types/apollo";
+import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Input } from "@nextui-org/input";
-import { Button } from "@nextui-org/button";
 
 export default function ManageVanityBotTab({ id: _id }: Pick<BotObject, "id">) {
 	return (

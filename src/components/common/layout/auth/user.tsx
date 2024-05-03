@@ -4,12 +4,14 @@ import { UserPermissions } from "@/lib/constants/api";
 import useSessionStore from "@/lib/stores/session";
 import { type AuthUserObject, useLogoutMutation } from "@/lib/types/apollo";
 import { handleError, hasPermissionFor, parseAvatar } from "@/lib/utils/common";
+import { Avatar } from "@nextui-org/avatar";
 import {
 	Dropdown,
 	DropdownItem,
 	DropdownMenu,
 	DropdownTrigger,
 } from "@nextui-org/dropdown";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 import {
 	IconLogout2,
 	IconPlus,
@@ -19,8 +21,6 @@ import {
 import { useRouter } from "next/navigation";
 import Loader from "../../feedback/loader";
 import SubmitModal from "../../modals/submit";
-import { Avatar } from "@nextui-org/avatar";
-import { useDisclosure } from "@nextui-org/use-disclosure";
 
 export default function HeaderAuthUser({
 	avatar,

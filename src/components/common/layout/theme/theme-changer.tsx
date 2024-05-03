@@ -3,10 +3,10 @@
 import { Button } from "@nextui-org/button";
 import {
 	Dropdown,
-	DropdownTrigger,
+	DropdownItem,
 	DropdownMenu,
 	DropdownSection,
-	DropdownItem,
+	DropdownTrigger,
 } from "@nextui-org/dropdown";
 import { cn } from "@nextui-org/system";
 import { IconCircleFilled, IconPaintFilled } from "@tabler/icons-react";

@@ -1,9 +1,9 @@
 import { Button } from "@nextui-org/button";
 import {
 	Dropdown,
-	DropdownTrigger,
-	DropdownMenu,
 	DropdownItem,
+	DropdownMenu,
+	DropdownTrigger,
 } from "@nextui-org/dropdown";
 import { Input } from "@nextui-org/input";
 import { IconDirection, IconFilterFilled } from "@tabler/icons-react";
