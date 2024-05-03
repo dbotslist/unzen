@@ -3,7 +3,10 @@
 import ErrorMessage from "@/components/common/feedback/error-message";
 import { useGetUserSuspenseQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
-import { Avatar, Image, Tab, Tabs, Tooltip } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/avatar";
+import { Image } from "@nextui-org/image";
+import { Tabs, Tab } from "@nextui-org/tabs";
+import { Tooltip } from "@nextui-org/tooltip";
 import { IconAppsFilled, IconArchiveFilled } from "@tabler/icons-react";
 import { notFound } from "next/navigation";
 

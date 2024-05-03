@@ -1,5 +1,5 @@
 import ErrorMessage from "@/components/common/feedback/error-message";
-import { Progress } from "@nextui-org/react";
+import { Progress } from "@nextui-org/progress";
 import {
 	IconAlertTriangleFilled,
 	IconSquareNumber1Filled,

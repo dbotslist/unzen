@@ -1,12 +1,5 @@
-"use client";
-
-import {
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-	Skeleton,
-} from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Skeleton } from "@nextui-org/skeleton";
 
 export default function BotSkeletonCard() {
 	return (

@@ -1,8 +1,8 @@
 "use client";
 
-import { Button, type ButtonProps } from "@nextui-org/react";
 import Link from "next/link";
 import DiscordIcon from "../icons/discord";
+import { type ButtonProps, Button } from "@nextui-org/button";
 
 export default function LoginButton({
 	children = "Login",

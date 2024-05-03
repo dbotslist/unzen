@@ -3,8 +3,10 @@ import MarkdownRender from "@/components/common/feedback/markdown";
 import DiscordIcon from "@/components/common/icons/discord";
 import type { BotObject } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
-import { Chip, Link, User } from "@nextui-org/react";
 import NextLink from "next/link";
+import { Chip } from "@nextui-org/chip";
+import { User } from "@nextui-org/user";
+import { Link } from "@nextui-org/link";
 
 export default function OverviewBotTab({
 	description,

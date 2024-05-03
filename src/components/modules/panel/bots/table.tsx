@@ -1,17 +1,17 @@
 import LoadingScreen from "@/components/common/layout/loading-screen";
 import { BotStatus, type PanelBotsQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
+import { Button } from "@nextui-org/button";
+import { Chip } from "@nextui-org/chip";
+import { User } from "@nextui-org/user";
 import {
-	Button,
-	Chip,
 	Table,
 	TableBody,
 	TableCell,
 	TableColumn,
 	TableHeader,
 	TableRow,
-	User,
-} from "@nextui-org/react";
+} from "@nextui-org/table";
 import { IconCheck, IconX } from "@tabler/icons-react";
 
 interface AdminPanelBotsTableProps {

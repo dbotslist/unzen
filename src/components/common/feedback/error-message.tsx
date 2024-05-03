@@ -1,4 +1,4 @@
-import { cn } from "@nextui-org/react";
+import { cn } from "@nextui-org/system";
 import { IconMoodSadFilled } from "@tabler/icons-react";
 import type { ReactNode } from "react";
 

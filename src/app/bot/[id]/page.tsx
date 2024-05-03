@@ -12,16 +12,15 @@ import {
 	useVanityQuery,
 } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
+import { Avatar } from "@nextui-org/avatar";
+import { Button } from "@nextui-org/button";
 import {
-	Avatar,
-	Button,
 	Dropdown,
-	DropdownItem,
-	DropdownMenu,
 	DropdownTrigger,
-	Tab,
-	Tabs,
-} from "@nextui-org/react";
+	DropdownMenu,
+	DropdownItem,
+} from "@nextui-org/dropdown";
+import { Tabs, Tab } from "@nextui-org/tabs";
 import {
 	IconArrowUp,
 	IconCopyPlusFilled,

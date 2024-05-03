@@ -17,9 +17,6 @@ export function handleError(error: ApolloError) {
 	return error.graphQLErrors.map((e) =>
 		toast.error(
 			(e.extensions.originalError as { message?: string }).message ?? e.message,
-			{
-				icon: (e.extensions.face as string) ?? ":(",
-			},
 		),
 	);
 }

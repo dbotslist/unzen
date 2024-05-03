@@ -1,4 +1,4 @@
-import { commonColors, nextui } from "@nextui-org/react";
+import { commonColors, nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 import { generateColors, rosePineColors } from "./tailwind.colors";
 

@@ -10,7 +10,8 @@ import {
 	useSingleBotVoteSuspenseQuery,
 } from "@/lib/types/apollo";
 import { formatDate, handleError, parseAvatar } from "@/lib/utils/common";
-import { Avatar, Button } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/avatar";
+import { Button } from "@nextui-org/button";
 import { IconArrowLeft, IconArrowUp, IconServer } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Link from "next/link";

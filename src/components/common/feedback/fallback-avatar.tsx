@@ -1,5 +1,5 @@
 import { defaultImage } from "@/lib/constants/website";
-import { Avatar } from "@nextui-org/react";
+import { Avatar } from "@nextui-org/avatar";
 
 export default function FallbackAvatar() {
 	return (

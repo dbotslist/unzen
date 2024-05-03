@@ -1,13 +1,11 @@
-"use client";
-
+import { Button } from "@nextui-org/button";
 import {
-	Button,
 	Dropdown,
-	DropdownItem,
-	DropdownMenu,
 	DropdownTrigger,
-	Input,
-} from "@nextui-org/react";
+	DropdownMenu,
+	DropdownItem,
+} from "@nextui-org/dropdown";
+import { Input } from "@nextui-org/input";
 import { IconDirection, IconFilterFilled } from "@tabler/icons-react";
 
 export default function Page() {

@@ -6,14 +6,14 @@ import type {
 } from "@/lib/types/apollo";
 import type { DefaultModalProps } from "@/lib/types/common";
 import type { FetchResult, MutationFunctionOptions } from "@apollo/client";
+import { Button } from "@nextui-org/button";
 import {
-	Button,
 	Modal,
-	ModalBody,
 	ModalContent,
-	ModalFooter,
 	ModalHeader,
-} from "@nextui-org/react";
+	ModalBody,
+	ModalFooter,
+} from "@nextui-org/modal";
 
 interface BotDeleteModalProps extends DefaultModalProps {
 	id: string;

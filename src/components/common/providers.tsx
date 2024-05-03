@@ -2,7 +2,7 @@
 
 import { apolloClient } from "@/lib/constants/apollo-client";
 import { ApolloProvider } from "@apollo/client";
-import { NextUIProvider } from "@nextui-org/react";
+import { NextUIProvider } from "@nextui-org/system";
 import { useRouter } from "next/navigation";
 import { Toaster } from "sonner";
 

@@ -1,16 +1,17 @@
 import type { BotObject } from "@/lib/types/apollo";
-import { Tab, Tabs } from "@nextui-org/react";
-import React from "react";
-import ManageDangerBotTab from "./danger";
-import ManageDeveloperBotTab from "./developer";
-import ManageWebhooksBotTab from "./webhooks";
-import ManageVanityBotTab from "./vanity";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import {
 	IconAlertCircle,
 	IconApiApp,
 	IconLink,
 	IconWebhook,
 } from "@tabler/icons-react";
+import React from "react";
+
+import ManageDangerBotTab from "./danger";
+import ManageDeveloperBotTab from "./developer";
+import ManageVanityBotTab from "./vanity";
+import ManageWebhooksBotTab from "./webhooks";
 
 export default function ManageBotTab({
 	id,

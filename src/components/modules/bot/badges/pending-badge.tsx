@@ -1,4 +1,5 @@
-import { Tooltip, cn } from "@nextui-org/react";
+import { cn } from "@nextui-org/system";
+import { Tooltip } from "@nextui-org/tooltip";
 import { IconClockFilled, type IconProps } from "@tabler/icons-react";
 
 export default function PendingBotBadge({

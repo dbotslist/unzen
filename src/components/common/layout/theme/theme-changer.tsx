@@ -1,14 +1,14 @@
 "use client";
 
+import { Button } from "@nextui-org/button";
 import {
-	Button,
 	Dropdown,
-	DropdownItem,
+	DropdownTrigger,
 	DropdownMenu,
 	DropdownSection,
-	DropdownTrigger,
-	cn,
-} from "@nextui-org/react";
+	DropdownItem,
+} from "@nextui-org/dropdown";
+import { cn } from "@nextui-org/system";
 import { IconCircleFilled, IconPaintFilled } from "@tabler/icons-react";
 import { useEffect } from "react";
 import { useLocalStorage } from "react-use";

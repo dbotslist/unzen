@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import { IconUserOff } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 

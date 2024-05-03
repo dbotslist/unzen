@@ -33,6 +33,7 @@ export async function GET(req: NextRequest) {
 				code,
 			},
 		},
+		errorPolicy: "ignore",
 	});
 
 	if (!auth || !auth.createSession.access_token)

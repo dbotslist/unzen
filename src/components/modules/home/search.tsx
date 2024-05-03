@@ -3,7 +3,7 @@
 import ErrorMessage from "@/components/common/feedback/error-message";
 import Motion from "@/components/common/motion";
 import { fadeInFromBottomAndOutBottom } from "@/lib/constants/motion/variants";
-import { Input } from "@nextui-org/react";
+import { Input } from "@nextui-org/input";
 import { IconSearch, IconSearchOff } from "@tabler/icons-react";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";

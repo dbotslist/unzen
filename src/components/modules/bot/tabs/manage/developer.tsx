@@ -1,14 +1,9 @@
 import Loader from "@/components/common/feedback/loader";
 import { type BotObject, useResetApiKeyMutation } from "@/lib/types/apollo";
 import { handleError } from "@/lib/utils/common";
-import {
-	Button,
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-	Input,
-} from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Input } from "@nextui-org/input";
 import { IconRefresh } from "@tabler/icons-react";
 import { toast } from "sonner";
 

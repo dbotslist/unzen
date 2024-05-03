@@ -1,18 +1,11 @@
-"use client";
-
 import CertifiedBotBadge from "@/components/modules/bot/badges/certified-badge";
 import type { BotObject } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
-import {
-	Avatar,
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-} from "@nextui-org/react";
 import { IconArrowUp, IconServer } from "@tabler/icons-react";
 import Link from "next/link";
 import FallbackAvatar from "../feedback/fallback-avatar";
+import { Avatar } from "@nextui-org/avatar";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 
 interface BotCardProps extends Partial<BotObject> {}
 

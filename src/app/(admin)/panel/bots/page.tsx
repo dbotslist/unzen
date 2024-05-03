@@ -6,12 +6,8 @@ import {
 	usePanelBotsQuery,
 	useUpdateBotStatusMutation,
 } from "@/lib/types/apollo";
-import {
-	BreadcrumbItem,
-	Breadcrumbs,
-	Select,
-	SelectItem,
-} from "@nextui-org/react";
+import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/breadcrumbs";
+import { Select, SelectItem } from "@nextui-org/select";
 import { IconFilterFilled } from "@tabler/icons-react";
 import { useState } from "react";
 import { toast } from "sonner";

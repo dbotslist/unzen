@@ -1,4 +1,4 @@
-import { commonColors } from "@nextui-org/react";
+import { commonColors } from "@nextui-org/theme";
 
 export const rosePineColors = {
     default: {

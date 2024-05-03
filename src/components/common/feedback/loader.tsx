@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@nextui-org/react";
+import { cn } from "@nextui-org/system";
 import { IconLoader2, type IconProps } from "@tabler/icons-react";
 
 export default function Loader({

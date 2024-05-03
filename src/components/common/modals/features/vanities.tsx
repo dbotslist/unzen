@@ -1,17 +1,17 @@
 "use client";
 
 import { modalMotionProps } from "@/lib/constants/motion/props";
+import { Button } from "@nextui-org/button";
+import { useDisclosure } from "@nextui-org/use-disclosure";
+import { useLocalStorage } from "react-use";
 import {
-	Button,
-	Image,
 	Modal,
 	ModalBody,
 	ModalContent,
 	ModalFooter,
 	ModalHeader,
-	useDisclosure,
-} from "@nextui-org/react";
-import { useLocalStorage } from "react-use";
+} from "@nextui-org/modal";
+import { Image } from "@nextui-org/image";
 
 /// FID: 1
 export default function VanitiesFeatureModal() {

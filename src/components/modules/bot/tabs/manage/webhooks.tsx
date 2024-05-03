@@ -10,16 +10,10 @@ import {
 	useWebhookQuery,
 } from "@/lib/types/apollo";
 import { handleError } from "@/lib/utils/common";
-import {
-	Button,
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-	Input,
-	Select,
-	SelectItem,
-} from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Input } from "@nextui-org/input";
+import { Select, SelectItem } from "@nextui-org/select";
 import { useEffect } from "react";
 import { type SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";

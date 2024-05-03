@@ -1,15 +1,9 @@
 import { modalMotionProps } from "@/lib/constants/motion/props";
 import type { DefaultModalProps } from "@/lib/types/common";
-import {
-	Card,
-	CardBody,
-	Modal,
-	ModalBody,
-	ModalContent,
-	ModalHeader,
-	Tooltip,
-} from "@nextui-org/react";
+import { Card, CardBody } from "@nextui-org/card";
+import { Modal, ModalContent, ModalHeader, ModalBody } from "@nextui-org/modal";
 import { IconAppsFilled, IconArchiveFilled } from "@tabler/icons-react";
+import { Tooltip } from "@nextui-org/tooltip";
 import Link from "next/link";
 
 export default function SubmitModal({ ...props }: DefaultModalProps) {
