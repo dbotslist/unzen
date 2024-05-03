@@ -1,7 +1,9 @@
 import TagButton from "@/components/common/buttons/tag-button";
+import Motion from "@/components/common/motion";
 import HomeBotsRows from "@/components/modules/home/rows";
 import HomeSearchInput from "@/components/modules/home/search";
 import HomeSuspenseFallback from "@/components/modules/home/suspense";
+import { smoothFadeInFromBottomAndOutBottom } from "@/lib/constants/motion/variants";
 import { Suspense } from "react";
 
 export default function Page() {
@@ -27,11 +29,16 @@ export default function Page() {
 					</div>
 				</div>
 				<div className="z-[2] gradient-mask-b-0 xl:flex hidden">
-					<div className="grid grid-cols-5 gap-3 opacity-60">
-						{[...Array(15)].map((_, index) => (
-							<div key={index} className="w-20 h-20 rounded-xl bg-secondary" />
-						))}
-					</div>
+					<Motion variants={smoothFadeInFromBottomAndOutBottom}>
+						<div className="grid grid-cols-5 gap-3 opacity-60">
+							{[...Array(15)].map((_, index) => (
+								<div
+									key={index}
+									className="w-20 h-20 rounded-xl bg-secondary"
+								/>
+							))}
+						</div>
+					</Motion>
 				</div>
 			</div>
 			<Suspense fallback={<HomeSuspenseFallback />}>

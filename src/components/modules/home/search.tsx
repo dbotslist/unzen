@@ -5,16 +5,20 @@ import Motion from "@/components/common/motion";
 import { fadeInFromBottomAndOutBottom } from "@/lib/constants/motion/variants";
 import { Input } from "@nextui-org/react";
 import { IconSearch, IconSearchOff } from "@tabler/icons-react";
+import { AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useClickAway } from "react-use";
 
+// todo: make this a real working search input, lol.
 export default function HomeSearchInput() {
 	const popoverRef = useRef<HTMLDivElement>(null);
 	const [query, setQuery] = useState<string | null>(null);
 	const [showPopover, setShowPopover] = useState<boolean>(false);
 
+	// close the popover when clicking outside of it
 	useClickAway(popoverRef, () => setShowPopover(false));
 
+	// show popover when query is at least 1 character long
 	useEffect(() => {
 		if (query && query?.length >= 1) setShowPopover(true);
 		else setShowPopover(false);
@@ -27,24 +31,26 @@ export default function HomeSearchInput() {
 				fullWidth
 				placeholder="Search bots in dbots.fun"
 			/>
-			{showPopover && (
-				<div ref={popoverRef}>
-					<Motion
-						variants={fadeInFromBottomAndOutBottom}
-						className="absolute mt-1 w-full z-[100] bg-content1 rounded-medium p-5"
-					>
-						<div className="flex flex-col gap-2">
-							<h3 className="text-xl font-semibold">Search results</h3>
-							{/* <LoadingScreen /> */}
-							<ErrorMessage
-								icon={<IconSearchOff className="w-5 h-5" />}
-								message="No results for that query"
-								isCentered
-							/>
-						</div>
-					</Motion>
-				</div>
-			)}
+			<AnimatePresence>
+				{showPopover && (
+					<div ref={popoverRef}>
+						<Motion
+							variants={fadeInFromBottomAndOutBottom}
+							className="absolute mt-1 w-full z-[100] bg-content1 rounded-medium p-5"
+						>
+							<div className="flex flex-col gap-2">
+								<h3 className="text-xl font-semibold">Search results</h3>
+								{/* <LoadingScreen /> */}
+								<ErrorMessage
+									icon={<IconSearchOff className="w-5 h-5" />}
+									message="No results for that query"
+									isCentered
+								/>
+							</div>
+						</Motion>
+					</div>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 }
