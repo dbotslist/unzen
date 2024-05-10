@@ -3,7 +3,7 @@
 import ErrorMessage from "@/components/common/feedback/error-message";
 import Loader from "@/components/common/feedback/loader";
 import useSessionStore from "@/lib/stores/session";
-import { useCreateVoteMutation, type BotObject } from "@/lib/types/apollo";
+import { type BotObject, useCreateVoteMutation } from "@/lib/types/apollo";
 import { handleError } from "@/lib/utils/common";
 import { Button } from "@nextui-org/button";
 import { toast } from "sonner";

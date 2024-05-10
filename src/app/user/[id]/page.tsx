@@ -1,7 +1,7 @@
 "use client";
 
 import UserTabs from "@/components/modules/user/tabs";
-import { useGetUserSuspenseQuery, type BotObject } from "@/lib/types/apollo";
+import { type BotObject, useGetUserSuspenseQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import { Avatar } from "@nextui-org/avatar";
 import { Image } from "@nextui-org/image";

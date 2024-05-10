@@ -1,6 +1,6 @@
 import ErrorMessage from "@/components/common/feedback/error-message";
 import type { BotOwnerObject } from "@/lib/types/apollo";
-import { Tabs, Tab } from "@nextui-org/tabs";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import { IconAppsFilled, IconArchiveFilled } from "@tabler/icons-react";
 import UserBotsTab from "./bots";
 
