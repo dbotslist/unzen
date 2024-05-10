@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "pnpm biome check --apply-unsafe src",
+    "lint:staged": "pnpm biome check --apply-unsafe --staged src",
     "codegen": "gql-gen --config codegen.yml",
     "postinstall": "pnpm lefthook install"
   },

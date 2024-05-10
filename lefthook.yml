@@ -1,7 +1,7 @@
 pre-commit:
   commands:
     "lint staged files":
-      run: pnpm lint-staged
+      run: pnpm lint:staged
 
 commit-msg:
   scripts:
