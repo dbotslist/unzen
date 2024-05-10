@@ -3,7 +3,7 @@
 import BotCard from "@/components/common/cards/bot.normal";
 import { type BotObject, useHomeBotsSuspenseQuery } from "@/lib/types/apollo";
 import { IconDiamondFilled, IconThumbUpFilled } from "@tabler/icons-react";
-import BotRow from "../bot/row";
+import BotRow from "../../common/cards/bot.row";
 
 export default function HomeBotsRows() {
 	const {

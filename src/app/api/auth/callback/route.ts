@@ -1,18 +1,7 @@
 import { apolloClient } from "@/lib/constants/apollo-client";
-import type { Mutation } from "@/lib/types/apollo";
-import { gql } from "@apollo/client";
+import { CreateSessionDocument, type Mutation } from "@/lib/types/apollo";
 import { serialize } from "cookie";
 import { type NextRequest, NextResponse } from "next/server";
-
-const createSessionDocument = gql`
-mutation CreateSession($input: CreateSessionInput!) {
-  createSession(input: $input) {
-    access_token
-    expires_in
-    refresh_token
-  }
-}
-`;
 
 const quickRedirect = (endpoint: string, url: string) =>
 	NextResponse.redirect(new URL(endpoint, url));
@@ -27,7 +16,7 @@ export async function GET(req: NextRequest) {
 		);
 
 	const { data: auth } = await apolloClient.mutate<Mutation>({
-		mutation: createSessionDocument,
+		mutation: CreateSessionDocument,
 		variables: {
 			input: {
 				code,

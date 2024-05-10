@@ -71,7 +71,7 @@ export default function ManageDangerBotTab({
 						className="w-fit"
 						startContent={<IconTransfer className="w-5 h-5" />}
 					>
-						Trasnfer ownership
+						Transfer ownership
 					</Button>
 				</CardFooter>
 			</Card>

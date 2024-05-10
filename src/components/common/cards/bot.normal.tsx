@@ -70,8 +70,9 @@ export default function BotCard({
 				style={{
 					backgroundImage: `url('${parseAvatar(avatar, id as string)}')`,
 				}}
-				className="animate-in bg-no-repeat duration-300 bg-cover absolute w-full h-full bottom-0 gradient-mask-t-0 group-hover:gradient-mask-t-30 opacity-10"
+				className="bg-no-repeat duration-300 bg-cover absolute w-full h-full bottom-0 gradient-mask-t-0 opacity-10 hover:opacity-15"
 			/>
+			<div className="bg-secondary bg-no-repeat duration-300 bg-cover absolute w-full h-full bottom-0 gradient-mask-t-0 opacity-10 hover:opacity-15" />
 		</Card>
 	);
 }

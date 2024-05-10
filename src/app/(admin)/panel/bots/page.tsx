@@ -1,6 +1,6 @@
 "use client";
 
-import AdminPanelBotsTable from "@/components/modules/panel/bots/table";
+import AdminPanelBotsTable from "@/components/modules/bot/panel/table";
 import {
 	BotStatus,
 	usePanelBotsQuery,

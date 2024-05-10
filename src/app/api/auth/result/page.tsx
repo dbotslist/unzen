@@ -2,7 +2,7 @@
 
 import LoadingScreen from "@/components/common/layout/loading-screen";
 import useSessionStore from "@/lib/stores/session";
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import { IconCheck, IconX } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import React from "react";

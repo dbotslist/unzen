@@ -1,6 +1,7 @@
 overwrite: true
 schema: "http://localhost:3001/graphql"
 documents: "src/lib/graphql/**/*.{graphql,gql}"
+verbose: true
 generates:
   src/lib/types/apollo.ts:
     plugins: ["typescript", "typescript-resolvers", "typescript-operations", "typescript-react-apollo"]

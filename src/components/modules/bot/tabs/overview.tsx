@@ -66,7 +66,7 @@ export default function OverviewBotTab({
 							<TagButton
 								key={key}
 								as={NextLink}
-								href={`/explore?tag=${tag.name}`}
+								href={`/explore?tag=${tag.id}`}
 							>
 								{tag.displayName}
 							</TagButton>
@@ -74,7 +74,7 @@ export default function OverviewBotTab({
 					</div>
 				</div>
 				<div className="flex flex-col gap-2">
-					<h1 className="text-2xl font-bold">Links TDIDIDIDIDO</h1>
+					<h1 className="text-2xl font-bold">Links</h1>
 					<div className="flex flex-col gap-2">
 						<Link color="secondary" underline="always" as={NextLink} href="/gg">
 							<DiscordIcon className="w-5 h-5 mr-2" />

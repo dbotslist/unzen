@@ -73,3 +73,12 @@ mutation UpdateWebhook($input: UpdateWebhookInput!) {
 mutation Logout {
   logOut
 }
+
+# Create a session
+mutation CreateSession($input: CreateSessionInput!) {
+  createSession(input: $input) {
+    access_token
+    expires_in
+    refresh_token
+  }
+}
