@@ -10,6 +10,8 @@ import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Input } from "@nextui-org/input";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Code } from "@nextui-org/code";
+import { IconArrowRight } from "@tabler/icons-react";
 
 export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
 	const [vanity, setVanity] = useState<string | null>(null);
@@ -20,6 +22,7 @@ export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
 	}); // Actually I can't get the Vanity using the 'targetId' so is a ToDo
 
 	const [createVanity, { loading: creatingVanity }] = useCreateVanityMutation({
+		variables: { input: { targetId: id, id: vanity!, type: VanityType.Bot } },
 		onCompleted: () => toast.success("Vanity updated 👌"),
 		onError: handleError,
 	});
@@ -29,22 +32,23 @@ export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
 				<CardHeader className="text-2xl font-bold">Bot vanity</CardHeader>
 				<CardBody>
 					<Input
-						onChange={(e) => setVanity(e.currentTarget.value)}
+						value={vanity!}
+						onChange={(e) => setVanity(e.target.value)}
 						label="Vanity"
 						labelPlacement="outside"
 						placeholder="Your vanity"
-						description={`E.g: /bot/${id} -> /b/${vanity ?? "akashi"}`}
+						description={
+							<div className="flex items-center gap-2">
+								<Code color="secondary">/bot/${id}</Code>
+								<IconArrowRight className="w-4 h-4" />
+								<Code color="secondary">/b/${vanity ?? "vanity"}</Code>
+							</div>
+						}
 					/>
 				</CardBody>
 				<CardFooter>
 					<Button
-						onClick={() =>
-							createVanity({
-								variables: {
-									input: { targetId: id, id: vanity!, type: VanityType.Bot },
-								},
-							})
-						}
+						onClick={() => createVanity()}
 						isLoading={creatingVanity}
 						variant="faded"
 						className="w-fit"
