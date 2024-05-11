@@ -39,9 +39,9 @@ export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
 						placeholder="Your vanity"
 						description={
 							<div className="flex items-center gap-2">
-								<Code color="secondary">/bot/${id}</Code>
+								<Code color="secondary">/bot/{id}</Code>
 								<IconArrowRight className="w-4 h-4" />
-								<Code color="secondary">/b/${vanity ?? "vanity"}</Code>
+								<Code color="secondary">/b/{vanity ?? "vanity"}</Code>
 							</div>
 						}
 					/>
