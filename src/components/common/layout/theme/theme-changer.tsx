@@ -15,40 +15,27 @@ import { useLocalStorage } from "react-use";
 
 const visibleColors = [
 	{
+		name: "Blurple",
+		value: "dark",
+	},
+	{
+		name: "Pine",
+		value: "pine",
+	},
+	{
+		name: "Peach",
+		value: "peach",
+	},
+	{
 		name: "Cyan",
 		value: "cyan",
-	},
-	{
-		name: "Pink",
-		value: "pink",
-	},
-	{
-		name: "Green",
-		value: "green",
-	},
-	{
-		name: "Rose",
-		value: "rose",
 	},
 	{
 		name: "Purple",
 		value: "purple",
 	},
-	{
-		name: "Orange",
-		value: "orange",
-	},
-	{
-		name: "Rosé Pine",
-		value: "rose-pine",
-	},
-	{
-		name: "Rosé Pine (Moon)",
-		value: "rose-pine-moon",
-	},
 ];
 
-// Color theme changer (WIP)
 export default function ColorThemeChanger() {
 	const [activeColor, setActiveColor] = useLocalStorage(
 		"color",
@@ -56,9 +43,10 @@ export default function ColorThemeChanger() {
 	);
 
 	useEffect(() => {
-		document
-			.getElementById("main_element")
-			?.setAttribute("class", activeColor ?? visibleColors[0].value);
+		document.documentElement.setAttribute(
+			"class",
+			activeColor ?? visibleColors[0].value,
+		);
 	}, [activeColor]);
 	return (
 		<Dropdown

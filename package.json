@@ -63,6 +63,7 @@
     "react-use": "^17.5.0",
     "sonner": "^1.4.41",
     "tailwind-gradient-mask-image": "^1.2.0",
+    "theme-colors": "^0.1.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {

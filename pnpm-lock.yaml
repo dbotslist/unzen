@@ -158,6 +158,9 @@ importers:
       tailwind-gradient-mask-image:
         specifier: ^1.2.0
         version: 1.2.0
+      theme-colors:
+        specifier: ^0.1.0
+        version: 0.1.0
       zustand:
         specifier: ^4.5.2
         version: 4.5.2(@types/react@18.3.1)(react@18.3.1)
@@ -3672,6 +3675,9 @@ packages:
   text-extensions@2.4.0:
     resolution: {integrity: sha512-te/NtwBwfiNRLf9Ijqx3T0nlqZiQ2XrrtBvu+cLL8ZRrGkO0NHTug8MYFKyoSrv/sHTaSKfilUkizV6XhxMJ3g==}
     engines: {node: '>=8'}
+
+  theme-colors@0.1.0:
+    resolution: {integrity: sha512-6gTEHQqWlQNiOEGHCSSQmU//E5SnXHJ4H7oHQOD8x77CvNYNQAmt73dqR71mzw5ULV87zaHLxK5pIBnsToFuZw==}
 
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
@@ -8345,6 +8351,8 @@ snapshots:
       - ts-node
 
   text-extensions@2.4.0: {}
+
+  theme-colors@0.1.0: {}
 
   thenify-all@1.6.0:
     dependencies:
