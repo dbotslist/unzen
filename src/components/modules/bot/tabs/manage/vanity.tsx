@@ -7,11 +7,11 @@ import {
 import { handleError } from "@/lib/utils/common";
 import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
+import { Code } from "@nextui-org/code";
 import { Input } from "@nextui-org/input";
+import { IconArrowRight } from "@tabler/icons-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Code } from "@nextui-org/code";
-import { IconArrowRight } from "@tabler/icons-react";
 
 export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
 	const [vanity, setVanity] = useState<string | null>(null);
