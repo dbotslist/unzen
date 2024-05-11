@@ -1,8 +1,8 @@
 import {
+	type BotObject,
 	VanityType,
 	useCreateVanityMutation,
 	useGetVanityQuery,
-	type BotObject,
 } from "@/lib/types/apollo";
 import { handleError } from "@/lib/utils/common";
 import { Button } from "@nextui-org/button";
@@ -17,7 +17,7 @@ export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
 		variables: { input: { id } },
 		onCompleted: (data) => setVanity(data.getVanity.id),
 		errorPolicy: "ignore",
-	});
+	}); // Actually I can't get the Vanity using the 'targetId' so is a ToDo
 
 	const [createVanity, { loading: creatingVanity }] = useCreateVanityMutation({
 		onCompleted: () => toast.success("Vanity updated 👌"),
