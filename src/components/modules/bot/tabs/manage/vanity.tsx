@@ -14,12 +14,13 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 export default function ManageVanityBotTab({ id }: Pick<BotObject, "id">) {
+	// todo: do a form
 	const [vanity, setVanity] = useState<string | null>(null);
 	useGetVanityQuery({
 		variables: { input: { id } },
 		onCompleted: (data) => setVanity(data.getVanity.id),
 		errorPolicy: "ignore",
-	}); // Actually I can't get the Vanity using the 'targetId' so is a ToDo
+	});
 
 	const [createVanity, { loading: creatingVanity }] = useCreateVanityMutation({
 		variables: { input: { targetId: id, id: vanity!, type: VanityType.Bot } },
