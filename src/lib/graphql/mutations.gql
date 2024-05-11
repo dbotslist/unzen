@@ -82,3 +82,13 @@ mutation CreateSession($input: CreateSessionInput!) {
     refresh_token
   }
 }
+
+# Create a vanity
+mutation CreateVanity($input: CreateVanityInput!) {
+  createVanity(input: $input) {
+    id
+    targetId
+    type
+    userId
+  }
+}

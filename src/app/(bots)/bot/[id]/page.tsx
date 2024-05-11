@@ -6,11 +6,7 @@ import SettingsBotTab from "@/components/modules/bot/tabs/manage";
 import OverviewBotTab from "@/components/modules/bot/tabs/overview";
 import ReviewsBotTab from "@/components/modules/bot/tabs/reviews";
 import { useSession } from "@/lib/hooks/session";
-import {
-	type BotObject,
-	useSingleBotSuspenseQuery,
-	useVanityQuery,
-} from "@/lib/types/apollo";
+import { type BotObject, useSingleBotSuspenseQuery } from "@/lib/types/apollo";
 import { parseAvatar } from "@/lib/utils/common";
 import { Avatar } from "@nextui-org/avatar";
 import { Button } from "@nextui-org/button";
@@ -37,17 +33,13 @@ import { notFound } from "next/navigation";
 
 export default function Page({ params }: { params: { id: string } }) {
 	const { data: user } = useSession();
-	const { data: vanity } = useVanityQuery({
-		variables: { input: { id: params.id } },
-		errorPolicy: "none",
-	});
 	const {
 		data: { getBot: bot },
 		error,
 	} = useSingleBotSuspenseQuery({
 		variables: {
 			input: {
-				id: vanity?.getVanity.targetId ?? params.id,
+				id: params.id,
 			},
 		},
 	});

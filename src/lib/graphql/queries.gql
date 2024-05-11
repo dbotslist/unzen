@@ -182,7 +182,7 @@ query Session {
 }
 
 # Query to get a vanity
-query Vanity($input: GetVanityInput!) {
+query GetVanity($input: GetVanityInput!) {
   getVanity(input: $input) {
     id
     targetId
