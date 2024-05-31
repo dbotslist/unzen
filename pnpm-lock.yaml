@@ -25,7 +25,7 @@ importers:
         version: 2.0.28(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/breadcrumbs':
         specifier: ^2.0.8
-        version: 2.0.8(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.0.9(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/button':
         specifier: ^2.0.32
         version: 2.0.32(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1074,8 +1074,8 @@ packages:
       react: '>=18'
       react-dom: '>=18'
 
-  '@nextui-org/breadcrumbs@2.0.8':
-    resolution: {integrity: sha512-ceRXich8DVrf468MwAIayoBmHB2dsQn3vcIt9ujCu9gLfcgkXqH3CNcU9W17lv0ZMDf4dLzb/qPUJncmNZrX0w==}
+  '@nextui-org/breadcrumbs@2.0.9':
+    resolution: {integrity: sha512-zjGHWRXFnSgVQtsP7BLJdecQQ226cSwIZS6fUSnQ1P9zpXvl7I6gZ/YXZX5TFUcqO0HDId1t4DKQhuquxBDRJg==}
     peerDependencies:
       '@nextui-org/system': '>=2.0.0'
       '@nextui-org/theme': '>=2.1.0'
@@ -5270,7 +5270,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/breadcrumbs@2.0.8(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/breadcrumbs@2.0.9(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.13(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.7(react@18.3.1)
@@ -5279,9 +5279,9 @@ snapshots:
       '@nextui-org/theme': 2.2.4(tailwindcss@3.4.3)
       '@react-aria/breadcrumbs': 3.5.11(react@18.3.1)
       '@react-aria/focus': 3.16.2(react@18.3.1)
-      '@react-aria/utils': 3.23.2(react@18.3.1)
+      '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/breadcrumbs': 3.7.3(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -5979,9 +5979,9 @@ snapshots:
     dependencies:
       '@react-aria/i18n': 3.11.1(react@18.3.1)
       '@react-aria/link': 3.7.1(react@18.3.1)
-      '@react-aria/utils': 3.23.2(react@18.3.1)
+      '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/breadcrumbs': 3.7.3(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
 
@@ -6024,9 +6024,9 @@ snapshots:
 
   '@react-aria/focus@3.16.2(react@18.3.1)':
     dependencies:
-      '@react-aria/interactions': 3.21.1(react@18.3.1)
-      '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-aria/interactions': 3.21.3(react@18.3.1)
+      '@react-aria/utils': 3.24.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       '@swc/helpers': 0.5.11
       clsx: 2.1.1
       react: 18.3.1
@@ -6577,7 +6577,7 @@ snapshots:
   '@react-types/breadcrumbs@3.7.3(react@18.3.1)':
     dependencies:
       '@react-types/link': 3.5.5(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       react: 18.3.1
 
   '@react-types/button@3.9.2(react@18.3.1)':
