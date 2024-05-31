@@ -19,7 +19,7 @@ importers:
         version: 2.0.33(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/avatar':
         specifier: ^2.0.28
-        version: 2.0.28(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.0.29(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/badge':
         specifier: ^2.0.28
         version: 2.0.28(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1060,6 +1060,14 @@ packages:
 
   '@nextui-org/avatar@2.0.28':
     resolution: {integrity: sha512-Rii8ptFJmt3ftcT9c5RP3AE99LHCikMLHl8La6I519s9f8fPkiPGdIwHnuBVC6gq5sI+O0ZbYcvBGrkuyJgDBw==}
+    peerDependencies:
+      '@nextui-org/system': '>=2.0.0'
+      '@nextui-org/theme': '>=2.1.0'
+      react: '>=18'
+      react-dom: '>=18'
+
+  '@nextui-org/avatar@2.0.29':
+    resolution: {integrity: sha512-XSVVjE6EgIAsSU5fXCh0vzF97p90y4eOD/oyxSJAAGieDCIFfaUtYJnh11qNzopG8pajt7pGczDmGvQakfVnmQ==}
     peerDependencies:
       '@nextui-org/system': '>=2.0.0'
       '@nextui-org/theme': '>=2.1.0'
@@ -5261,6 +5269,19 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
+  '@nextui-org/avatar@2.0.29(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@nextui-org/react-utils': 2.0.13(react@18.3.1)
+      '@nextui-org/shared-utils': 2.0.5
+      '@nextui-org/system': 2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/theme': 2.2.4(tailwindcss@3.4.3)
+      '@nextui-org/use-image': 2.0.5(react@18.3.1)
+      '@react-aria/focus': 3.16.2(react@18.3.1)
+      '@react-aria/interactions': 3.21.1(react@18.3.1)
+      '@react-aria/utils': 3.23.2(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   '@nextui-org/badge@2.0.28(@nextui-org/system@2.2.0(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(framer-motion@11.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.4(tailwindcss@3.4.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.13(react@18.3.1)
@@ -6026,7 +6047,7 @@ snapshots:
     dependencies:
       '@react-aria/interactions': 3.21.1(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       '@swc/helpers': 0.5.11
       clsx: 2.1.1
       react: 18.3.1
@@ -6105,7 +6126,7 @@ snapshots:
     dependencies:
       '@react-aria/ssr': 3.9.4(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
 
@@ -6352,7 +6373,7 @@ snapshots:
     dependencies:
       '@react-aria/ssr': 3.9.4(react@18.3.1)
       '@react-stately/utils': 3.10.1(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       '@swc/helpers': 0.5.11
       clsx: 2.1.1
       react: 18.3.1
