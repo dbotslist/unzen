@@ -1,10 +1,13 @@
+import { cookies } from "next/headers";
 import type React from "react";
 import { Toaster } from "sonner";
 import { ApolloWrapper } from "./apollo-wrapper";
 
 export default function Providers({ children }: React.PropsWithChildren) {
+	const sessionToken = cookies().get("session");
+
 	return (
-		<ApolloWrapper>
+		<ApolloWrapper token={sessionToken?.value}>
 			<Toaster
 				toastOptions={{
 					style: {

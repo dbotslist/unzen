@@ -1,3 +1,5 @@
+"use client";
+
 import { type RecipeVariantProps, css, cva, cx } from "@/styled-system/css";
 import { styled } from "@/styled-system/jsx";
 import { Button as HeadlessButton } from "@headlessui/react";

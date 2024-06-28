@@ -1,15 +1,19 @@
-"use client";
-
+import { SessionClientDocument } from "@/app/api/auth/callback/route";
 import BotTabsMain from "@/components/modules/bots/tabs/main";
 import CertifiedBadge from "@/components/shared/bot/certified-badge";
 import LineTitle from "@/components/shared/feedback/line-title";
 import { Badge } from "@/components/ui/badge";
-import { LinkButton, buttonIcon } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/button";
+import { buttonIcon } from "@/components/ui/button-icon";
 import { Heading } from "@/components/ui/heading";
 import Image from "@/components/ui/image";
 import { Text } from "@/components/ui/text";
-import { useSingleBotSuspenseQuery } from "@/lib/graphql/apollo";
-import useAuthStore from "@/lib/stores/auth";
+import { apolloClient } from "@/lib/constants/apollo/client-rsc";
+import {
+	type SessionQuery,
+	SingleBotDocument,
+	type SingleBotQuery,
+} from "@/lib/graphql/apollo";
 import { getAvatar, getDefaultInvite } from "@/lib/utils/discord";
 import { formatDateSince } from "@/lib/utils/format";
 import { css } from "@/styled-system/css";
@@ -24,14 +28,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 
-export const dynamic = "force-dynamic";
+export default async function Page({ params }: { params: { id: string } }) {
+	const auth = apolloClient.readQuery<SessionQuery>({
+		query: SessionClientDocument,
+	});
 
-export default function Page({ params }: { params: { id: string } }) {
-	const { data: auth } = useAuthStore();
 	const {
 		data: { getBot },
 		error,
-	} = useSingleBotSuspenseQuery({
+	} = await apolloClient.query<SingleBotQuery>({
+		query: SingleBotDocument,
 		variables: {
 			input: {
 				id: params.id,

@@ -12,7 +12,7 @@ import { css, cx } from "@/styled-system/css";
 import { Center, Flex, Grid, GridItem } from "@/styled-system/jsx";
 import { useOutsideClick } from "@chakra-ui/hooks";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef, useState, type ChangeEvent } from "react";
+import { type ChangeEvent, useEffect, useRef, useState } from "react";
 import { useDebounce } from "react-use";
 
 export default function HomeSearch({ isNav = false }: { isNav?: boolean }) {
@@ -35,13 +35,14 @@ export default function HomeSearch({ isNav = false }: { isNav?: boolean }) {
 	}, [query]);
 
 	const [ready] = useDebounce(
-		() => {
-			if (query)
-				refetch({
-					input: {
-						query: query ?? undefined,
-					},
-				});
+		async () => {
+			if (!query?.length) return;
+
+			await refetch({
+				input: {
+					query: query,
+				},
+			});
 		},
 		500,
 		[query],
