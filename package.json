@@ -13,7 +13,7 @@
 	"dependencies": {
 		"@apollo/client": "^3.10.6",
 		"@apollo/experimental-nextjs-app-support": "^0.11.2",
-		"@chakra-ui/hooks": "3.0.0-next.4",
+		"@chakra-ui/hooks": "3.0.0-next.10",
 		"@headlessui/react": "^2.0.4",
 		"@heroicons/react": "^2.1.4",
 		"@hookform/resolvers": "^3.6.0",
